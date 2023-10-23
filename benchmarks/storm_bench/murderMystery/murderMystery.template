@@ -1,0 +1,12 @@
+float gunFound                                                                                           
+gunFound = 1                                                                                             
+float aliceDunnit                                                                                        
+aliceDunnit = flip(0.3)                                                                                  
+float withGun                                                                                            
+withGun = flip(0.5)                                                                                      
+if (aliceDunnit) {                                                                                       
+    withGun = flip(0.03)                                                                                 
+} else {                                                                                                 
+    withGun = flip(0.8)                                                                                  
+}                                                                                                        
+hardObserve(withGun == gunFound)   

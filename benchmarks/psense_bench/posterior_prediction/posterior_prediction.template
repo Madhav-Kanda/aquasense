@@ -1,0 +1,9 @@
+float p
+float temp1
+float temp2
+p = uniform(0,1)
+temp1 = binomial(10, p)
+temp2 = binomial(10, p)
+hardObserve(temp1 == 0)
+hardObserve(temp2 == 10)
+

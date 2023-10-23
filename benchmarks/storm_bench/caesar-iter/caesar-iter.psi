@@ -1,0 +1,10 @@
+def main() {
+    key1 := categorical([0.25, 0.25, 0.25, 0.25]);
+    for i in [0..20) {
+        observation := 2;
+        drawnChar := categorical([0.5, 0.25, 0.125, 0.125]);
+        tmp := key1 + drawnChar;
+        observe(observation == tmp);
+    }
+    return key1;
+}

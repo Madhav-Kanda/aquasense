@@ -1,0 +1,23 @@
+float b[2]
+@limits <lower=0,upper=200>
+float o[1] 
+@limits <lower=50,upper=150>
+float x1
+b[1] = flip(0.2)
+b[2] = flip(0.5)
+if (b[1]) { 
+    b[2] = atom(1) 
+} 
+else {
+    b[2] = flip(0.2)
+}
+o[1] = uniform(0,200)
+x1 = uniform(50,150)
+if (b[1]){
+        o[1] = triangle(x1,50,10)
+}
+else{
+        o[1] = triangle(x1,50,50)
+}
+hardObserve(b[1]==1)
+return(o1)

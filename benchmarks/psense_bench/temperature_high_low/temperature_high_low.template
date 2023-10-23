@@ -1,0 +1,34 @@
+float prevObs
+float nextObs1
+float nextObs2
+float nextObs3
+float nextObs4
+
+prevObs = atom(1)
+nextObs1 = uniformInt(0, 1)
+if (prevObs) {
+    nextObs1 = bernoulli(0.9)
+} else {
+    nextObs1 = bernoulli(0.1)
+}
+
+nextObs2 = uniformInt(0, 1)
+if (nextObs1) {
+    nextObs2 = bernoulli(0.9)
+} else {
+    nextObs2 = bernoulli(0.1)
+}
+
+nextObs3 = uniformInt(0, 1)
+if (nextObs2) {
+    nextObs3 = bernoulli(0.9)
+} else {
+    nextObs3 = bernoulli(0.1)
+}
+
+nextObs4 = uniformInt(0, 1)
+if (nextObs3) {
+    nextObs4 = bernoulli(0.9)
+} else {
+    nextObs4 = bernoulli(0.1)
+}

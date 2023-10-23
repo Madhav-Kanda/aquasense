@@ -1,0 +1,2 @@
+float x
+x = bernoulli(0.2)

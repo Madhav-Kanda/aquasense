@@ -1,0 +1,19 @@
+vector [N] controlGroup : [0,0,1,0,0]
+vector [N] treatedGroup : [1,0,1,1,1]
+float isEffective
+isEffective = flip(0.5)
+float probIfTreated
+probIfTreated = beta(1,1)
+float probIfControl
+probIfControl = beta(1, 1)
+if (isEffective == 0) {
+    hardObserve(probIfControl == probIfTreated)
+}
+
+for (i in 1:5) {
+    controlGroup[i] = flip(probIfControl)
+}
+for (i in 1:5) {
+    treatedGroup[i] = flip(probIfTreated)
+}
+

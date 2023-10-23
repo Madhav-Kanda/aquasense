@@ -1,0 +1,17 @@
+vector [N] controlGroup : [0,0,1,1,0,1,0,1]
+vector [N] treatedGroup : [1,1,1,1,1,0,1,1]
+
+float isEffective
+float probIfTreated
+float probIfControl
+
+isEffective = beta(1,1)
+probIfControl = beta(1,1)
+if (isEffective > 0.5) {
+    probIfTreated = beta(5, 1)
+} else {
+    probIfTreated = beta(1, 1)
+}
+
+controlGroup = flip(probIfControl)
+treatedGroup = flip(treatedGroup)

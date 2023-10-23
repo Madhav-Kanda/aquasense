@@ -1,0 +1,27 @@
+float aEffects0
+float aEffects1
+float bEffects0
+float bEffects1
+float goal 
+float action
+float vendingMachine
+
+aEffects0 = beta(1,1)
+aEffects1 = 1 - aEffects0
+bEffects0 = beta(1,1)
+bEffects1 = 1 - bEffects0
+goal = bernoulli(0.5)
+
+action = categorical(0.5, 0.5)
+vendingMachine = categorical(1/3,1/3,1/3)
+if (action == 0){
+    vendingMachine = bernoulli(aEffects1)
+} else {
+    if (action == 1) {
+        vendingMachine = bernoulli(bEffects1)
+    } else {
+        vendingMachine = categorical(0.0,0.0, 1.0)
+    }
+}
+hardObserve(goal == vendingMachine)
+hardObserve((goal == 1) && (action == 1))

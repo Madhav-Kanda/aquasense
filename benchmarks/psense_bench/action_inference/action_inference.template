@@ -1,0 +1,14 @@
+float action
+action = categorical(0.5, 0.5)
+float obj
+obj = categorical(0.333, 0.333, 0.333)
+if (action == 0) {
+    obj = categorical(0.9, 0.1, 0.0)
+} else {
+    if (action == 1) {
+        obj = categorical(0.1, 0.9, 0.0)
+    } else {
+        obj = categorical(0.0, 0.0, 1.0)
+    }
+}
+hardObserve(obj == 1.0)

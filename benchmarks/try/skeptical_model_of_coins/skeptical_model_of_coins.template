@@ -1,0 +1,12 @@
+float sameAsFlippling
+sameAsFlippling = bernoulli(0.5)
+float p
+p = uniform(0, 1)
+if (sameAsFlippling) {
+    p = uniform(0.495, 0.505)
+} else {
+    p = uniform(0, 1)
+}
+float coinSpinner
+coinSpinner = binomial(20, p)
+hardObserve(coinSpinner == 15)

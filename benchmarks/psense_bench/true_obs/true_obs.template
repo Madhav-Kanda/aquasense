@@ -1,0 +1,8 @@
+vector[1] y : [0.2]
+
+@limits<lower=-10, upper=10>
+float trueX
+
+trueX = normal(0, 1)
+y = normal(trueX, 0.1)
+

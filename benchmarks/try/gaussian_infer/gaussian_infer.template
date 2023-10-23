@@ -1,0 +1,10 @@
+@limits<lower=-5, upper=5>
+float temp1
+temp1 = normal(0, 1)
+@limits<lower=-5, upper=5>
+float temp2
+temp2 = normal(0, 1)
+@limits<lower=-25, upper=25>
+float temp3
+temp3 = uniform(-25, 25)
+hardObserve(temp3 == temp1 * temp2)

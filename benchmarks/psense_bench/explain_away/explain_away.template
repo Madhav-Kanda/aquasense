@@ -1,0 +1,5 @@
+float A
+float B
+A = uniformInt(0, 9)
+B = uniformInt(0, 9)
+hardObserve(A == B)

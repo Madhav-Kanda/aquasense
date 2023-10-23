@@ -1,0 +1,42 @@
+float blocks_array0
+float blocks_array1
+blocks_array0 = bernoulli(0.4)
+blocks_array1 = bernoulli(0.4)
+float blocks_length
+float start_index
+blocks_length = 2
+start_index = atom(0)
+
+float machine
+float power1 
+float machine2
+float power2
+float machine3
+if (blocks_length == start_index) {
+    machine = bernoulli(0.05)
+} else {
+    if (blocks_array0) {
+        power1 = bernoulli(0.9)
+    } else {
+        power1 = bernoulli(0.05)
+    }
+    if (blocks_length == (start_index + 1)) {
+        machine2 = bernoulli(0.05)
+    } else {
+        if (blocks_array1) {
+            power2 = bernoulli(0.9)
+        } else {
+            power2 = bernoulli(0.05)
+        }
+        if (blocks_length == (start_index + 2)) {
+            machine3 = bernoulli(0.05)
+        } else {
+            machine3 = atom(0)
+        }
+        machine2 = bernoulli(power2 || machine3)
+    }
+    machine = bernoulli(power1 || machine2)
+}
+hardObserve(machine == 1)
+
+

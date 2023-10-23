@@ -1,0 +1,10 @@
+@limits <lower=0>
+int N : 10
+vector [N] y : [1.6024, 0.880643, -0.792556, -1.02184, -0.530578, 0.494777, -1.51075, -0.630318, -1.18208, 0.187967]
+@limits <lower=-5,upper=5>
+@prior
+vector [1] mu
+target = target + log_mix(0.8,normal_lpdf(mu[1],4,0.5),normal_lpdf(mu[1],-4,0.5))
+for(n in 1:N){
+target = target + student_t_lpdf(y[n],5,mu[1],2)
+}

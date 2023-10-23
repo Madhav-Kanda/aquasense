@@ -1,0 +1,59 @@
+float prev_word0
+float next_word1
+float next_word2
+
+prev_word0 = atom(0)
+next_word1 = uniformInt(0, 6)
+if(prev_word0 == 0){
+    next_word1 = categorical(0.0032, 0.4863, 0.0789, 0.0675, 0.1974, 0.1387, 0.0280)
+} else {
+    if(prev_word0 == 1){
+        next_word1 = categorical(0.0699, 0.1296, 0.0278, 0.4131, 0.1239, 0.2159, 0.0198) 
+    } else { 
+        if(prev_word0 == 2){
+            next_word1 = categorical(0.2301, 0.0571, 0.1884, 0.1393, 0.0977, 0.1040, 0.1834)
+        } else {
+            if(prev_word0 == 3){
+                next_word1 = categorical(0.1539, 0.0653, 0.0410, 0.1622, 0.2166, 0.2664, 0.0946)
+            } else {
+                if(prev_word0 == 4){
+                    next_word1 = categorical(0.0343, 0.0258, 0.6170, 0.0610, 0.0203, 0.2401, 0.0015)
+                } else {
+                    if(prev_word0 == 5){
+                        next_word1 = categorical(0.0602, 0.2479, 0.0034, 0.0095, 0.6363, 0.02940, 0.0133)
+                    } else {
+                        if(prev_word0 == 6){
+                            next_word1 = categorical(0.0602, 0.2479, 0.0034, 0.0095, 0.6363, 0.02940, 0.0133)}
+                    }
+                }
+            }
+        }
+    }
+}
+next_word2 = uniformInt(0, 6)
+if(next_word1 == 0){
+    next_word2 = categorical(0.0032, 0.4863, 0.0789, 0.0675, 0.1974, 0.1387, 0.0280)
+} else {
+    if(next_word1 == 1){
+        next_word2 = categorical(0.0699, 0.1296, 0.0278, 0.4131, 0.1239, 0.2159, 0.0198) 
+    } else { 
+        if(next_word1 == 2){
+            next_word2 = categorical(0.2301, 0.0571, 0.1884, 0.1393, 0.0977, 0.1040, 0.1834)
+        } else {
+            if(next_word1 == 3){
+                next_word2 = categorical(0.1539, 0.0653, 0.0410, 0.1622, 0.2166, 0.2664, 0.0946)
+            } else {
+                if(next_word1 == 4){
+                    next_word2 = categorical(0.0343, 0.0258, 0.6170, 0.0610, 0.0203, 0.2401, 0.0015)
+                } else {
+                    if(next_word1 == 5){
+                        next_word2 = categorical(0.0602, 0.2479, 0.0034, 0.0095, 0.6363, 0.02940, 0.0133)
+                    } else {
+                        if(next_word1 == 6){
+                            next_word2 = categorical(0.0602, 0.2479, 0.0034, 0.0095, 0.6363, 0.02940, 0.0133)}
+                    }
+                }
+            }
+        }
+    }
+}

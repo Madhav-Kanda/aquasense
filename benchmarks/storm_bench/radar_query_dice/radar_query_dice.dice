@@ -1,0 +1,27 @@
+let b1 = flip(0.2) in 
+let b2 = if b1 then int(1, 1) else discrete(0.8, 0.2) in
+let x1 = uniform(8, 50, 150) in
+let o1 = if b1 then (
+        let xt1 = uniform(8, 0, 50) in 
+        let xt2 = uniform(8, 50, 100) in 
+        let xt = xt1 + xt2 in
+        let tmp1 = observe xt <= int(8, 100) in 
+        let yt1 = uniform(8, 0, 10) in 
+        let yt2 = uniform(8, 10, 20) in 
+        let yt = yt1 + yt2 in
+        let tmp2 = observe yt > int(8, 20) in 
+        let ret = if flip(0.83333333)  then xt + x1 - int(8, 100) else yt + x1 - int(8, 20) in
+        ret )
+    else (
+        let xt1 = uniform(8, 0, 50) in 
+        let xt2 = uniform(8, 50, 100) in 
+        let xt = xt1 + xt2 in
+        let tmp1 = observe xt <= int(8, 100) in 
+        let yt1 = uniform(8, 0, 50) in 
+        let yt2 = uniform(8, 50, 100) in 
+        let yt = yt1 + yt2 in
+        let tmp2 = observe yt > int(8, 100) in 
+        let ret = if flip(0.5)  then xt + x1 - int(8, 100) else yt + x1 - int(8, 100) in
+        ret ) in 
+let tmp3 = observe b1 in 
+o1

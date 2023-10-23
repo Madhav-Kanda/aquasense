@@ -1,0 +1,8 @@
+def main(){
+        b0 := uniform(-1,1);
+        b1 := uniform(-1,1);
+        sigma := uniform(0,2);
+        predicted_y := b0 +  3*b1;
+        cobserve(gauss(predicted_y, sigma), 0.6094);
+        return b0;
+}

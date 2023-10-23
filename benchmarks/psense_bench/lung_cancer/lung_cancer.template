@@ -1,0 +1,7 @@
+float lungCancer
+float cold
+float temp
+lungCancer = bernoulli(0.01)
+cold = bernoulli(0.2)
+temp = bernoulli(0.5)
+hardObserve((lungCancer || cold) == temp)

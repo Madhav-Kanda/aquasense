@@ -1,0 +1,11 @@
+def main() {
+    Perfect := 0;
+    Nationality := flip(0.5);
+    if (Nationality == 0) {
+        Perfect = flip(0.1);
+    } 
+    else {
+        Perfect = flip(0.15);
+    }
+    return Perfect;
+}

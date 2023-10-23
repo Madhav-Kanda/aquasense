@@ -1,0 +1,4 @@
+def main(){
+        p := poisson(5);
+        return p;
+}

@@ -1,0 +1,5 @@
+float p
+p = uniform(0, 1)
+float coinSpinner
+coinSpinner = binomial(20, p)
+hardObserve(coinSpinner == 15)

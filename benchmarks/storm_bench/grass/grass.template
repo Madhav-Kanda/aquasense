@@ -1,0 +1,25 @@
+float cloudy
+cloudy = flip(0.5)
+float rain
+rain = flip(0.5)
+float sprinkler
+sprinkler = flip(0.5)
+
+if (cloudy) {
+    rain = flip(0.8)
+    sprinkler = flip(0.1)
+} else {
+    rain = flip(0.2)
+    sprinkler = flip(0.5)
+}
+float temp1
+temp1 = flip(0.7)
+float wetRoof
+wetRoof = temp1 && rain
+float temp2
+temp2 = flip(0.9)
+float temp3
+temp3 = flip(0.9)
+float wetGrass
+wetGrass = (temp2 && rain) || (temp3 && sprinkler)
+hardObserve(wetGrass)

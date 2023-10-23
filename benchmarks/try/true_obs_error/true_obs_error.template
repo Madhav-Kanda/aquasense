@@ -1,0 +1,5 @@
+float trueX
+trueX = normal(0,1)
+obsX = normal(0,1)
+hardObserve(obsX == 0.2)
+

@@ -1,0 +1,7 @@
+float firstCoin
+firstCoin = flip(0.5)
+float secondCoin
+secondCoin = flip(0.5)
+float bothHeads
+bothHeads = firstCoin && secondCoin
+hardObserve(bothHeads == 0)

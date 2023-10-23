@@ -1,0 +1,4 @@
+def main(){
+        g := geometric(0.5);
+        return g;
+}

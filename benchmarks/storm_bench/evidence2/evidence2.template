@@ -1,0 +1,14 @@
+float evidence
+evidence = flip(0.5)
+float coin
+coin = flip(0.5)
+if (evidence) {
+    float coin1
+    coin1 = flip(0.5)
+    hardObserve(coin1)
+    hardObserve(coin1 == coin)
+} else {
+    float coin1
+    coin1 = flip(0.5)
+    hardObserve(coin == coin1)
+}

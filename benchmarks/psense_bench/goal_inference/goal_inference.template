@@ -1,0 +1,19 @@
+float goal
+goal = categorical(0.5, 0.5)
+float action
+action = categorical(0.5, 0.5)
+float vendingMachine
+vendingMachine = categorical(0.5, 0.5)
+if (action == 0) {
+   vendingMachine = categorical(0.9, 0.1)
+} else {
+  if (action == 1) {
+      vendingMachine = categorical(0.1, 0.9)
+  } else {
+      vendingMachine = atom(2)
+  }
+}
+float haveCookie
+haveCookie = (vendingMachine == 1)
+hardObserve(goal == haveCookie)
+hardObserve(action == 1)

@@ -1,0 +1,6 @@
+let A = uniform(2,0,2) in
+let B = uniform(2,0,2) in
+let C = uniform(2,0,2) in
+let D  = A + B + C in
+let tmp = observe (D >= int(2,2)) in
+A

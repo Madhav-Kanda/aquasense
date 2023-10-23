@@ -1,0 +1,21 @@
+float examFair
+examFair = bernoulli(0.8)
+float doesHomework
+doesHomework = bernoulli(0.8)
+float pass_
+pass_ = uniformInt(0,1)
+if (examFair) {
+    if (doesHomework) {
+        pass_ = bernoulli(0.9)
+    } else {
+        pass_ = bernoulli(0.4)
+    }
+} else {
+    if (doesHomework) {
+        pass_ = bernoulli(0.6)
+    } else {
+        pass_ = bernoulli(0.2)
+    }
+}
+hardObserve(pass_ == 0)
+

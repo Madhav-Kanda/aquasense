@@ -1,0 +1,4 @@
+def main(){
+        u := uniformInt(0, 3);
+        return u;
+}

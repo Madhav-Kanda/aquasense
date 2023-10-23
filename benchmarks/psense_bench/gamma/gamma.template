@@ -1,0 +1,2 @@
+float c
+c = gamma(1, 0.5);

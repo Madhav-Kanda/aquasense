@@ -1,0 +1,11 @@
+float hypothesis
+float data
+hypothesis = bernoulli(0.5) 
+data = bernoulli(0.5)
+if (hypothesis) {
+    data = bernoulli(0.9)
+} else {
+    data = bernoulli(0.1)
+}
+hardObserve(data == 1)
+

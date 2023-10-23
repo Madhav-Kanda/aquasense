@@ -1,0 +1,15 @@
+vector[N] observeData : [1,1,1,1,1]
+float fairPrior
+fairPrior = 0.999
+float fair
+fair = bernoulli(fairPrior)
+for (i in 1:5) {
+    float coin
+    coin = bernoulli(0.5)
+    if (fair) {
+        coin = bernoulli(0.5)
+    } else {
+        coin = bernoulli(0.95)
+    }
+    hardObserve(coin == 1)
+} 

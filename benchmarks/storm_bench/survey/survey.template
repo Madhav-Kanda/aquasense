@@ -1,0 +1,56 @@
+float A
+float S
+float E
+A = categorical(0.30,0.50,0.20)
+S = categorical(0.60,0.40)
+E = categorical(0.5, 0.5) 
+if (A == 0) { 
+    if (S == 0) { 
+        E = categorical(0.75,0.25) 
+    } else {                                                                                             
+        E = categorical(0.64,0.36)  
+    }                                                                                                    
+} else {                                                                                                 
+    if (A == 1) { 
+        if (S == 0) { 
+            E = categorical(0.72,0.28) 
+        } else {                                                                                         
+            E = categorical(0.70,0.30)  
+        }                                                                                                
+    } else {                                                                                             
+        if (S == 0) { 
+            E = categorical(0.88,0.12) 
+        } else {                                                                                         
+            E = categorical(0.90,0.10) 
+        }                                                                                                
+    }                                                                                                    
+}                                                                                                        
+float R
+R = categorical(0.5, 0.5)
+if (E == 0) { 
+    R = categorical(0.25,0.75) 
+} else {                                                                                                 
+    R = categorical(0.20,0.80)  
+}                                                                                                        
+float O
+O = categorical(0.5, 0.5)
+if (E == 0) { 
+    O = categorical(0.96,0.04) 
+} else {                                                                                                 
+    O = categorical(0.92,0.08) 
+}                                                                                                        
+float T
+T = categorical(0.33, 0.33, 0.33)
+if (O == 0) {
+    if (R == 0) {
+        T = categorical(0.48,0.42,0.10) 
+    } else {
+        T = categorical(0.58,0.24,0.18) 
+    } 
+} else {
+    if (R == 0) {
+        T = categorical(0.56,0.36,0.08) 
+    } else {
+        T = categorical(0.70,0.21,0.09) 
+    } 
+}

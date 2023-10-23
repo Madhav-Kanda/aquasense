@@ -1,0 +1,11 @@
+@limits<lower=-5, upper=5>
+float x
+x = normal(0,1)
+@limits<lower=-5, upper=5>
+float y
+y = normal(0,1)
+float r
+r = uniform(-5, 5)
+float temp
+temp = fmax(x, y)
+hardObserve(r == temp)

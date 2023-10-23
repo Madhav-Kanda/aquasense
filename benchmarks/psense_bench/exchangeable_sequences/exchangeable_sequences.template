@@ -1,0 +1,14 @@
+float prob
+prob = discrete(0.2, 0.7)
+float temp
+temp = bernoulli(0.5)
+if (temp) {
+  hardObserve(prob == 0.2) 
+} else {
+  hardObserve(prob == 0.7) 
+}
+float s0
+float s1
+s0 = bernoulli(prob)
+s1 = bernoulli(prob)
+hardObserve(s0 == 1)

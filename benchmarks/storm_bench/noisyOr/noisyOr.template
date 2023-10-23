@@ -1,0 +1,49 @@
+float n0
+float n1
+float n2
+float n3
+float n4
+float n21
+float n22
+float n31
+float n32
+float n33
+n0 = flip(0.5)
+n4 = flip(0.5)
+n1 = flip(0.5)
+
+n21 = flip(0.5)
+n22 = flip(0.5)
+n31 = flip(0.5)
+n32 = flip(0.5)
+n33 = flip(0.5)
+if (n0) {
+    n1 = flip(0.8)
+    n21 = flip(0.8)
+} else {
+    n1 = flip(0.1)
+    n21 = flip(0.1)
+}
+if (n4) {
+    n22 = flip(0.8)
+    n33 = flip(0.8)
+} else {
+    n22 = flip(0.1)
+    n33 = flip(0.1)
+}
+n2 = n21 || n22
+if (n1) {
+    n31 = flip(0.8)
+} else {
+    n31 = flip(0.1)
+}
+if (n2) {
+    n32 = flip(0.8)
+} else {
+    n32 = flip(0.1)
+}
+
+n3 = flip(0.5)
+float temp
+temp = (n31 || n32 || n33)
+hardObserve(n3 == temp)

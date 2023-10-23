@@ -1,0 +1,4 @@
+def main(){
+        c := beta(2, 2);
+        return c;
+}

@@ -1,0 +1,21 @@
+vector[N] pseudoCounts : [1, 1]
+
+float fairPrior 
+fairPrior = 0.999
+float fair
+fair = bernoulli(fairPrior)
+float coinWeight
+coinWeight = uniform(0, 1)
+if (fair == 0) {
+    coinWeight = beta(pseudoCounts[0], pseudoCounts[1])
+} else {
+    coinWeight = atom(0.5)
+}
+for (i in 1:20) {
+    float temp1
+    float temp2
+    temp1 = bernoulli(0.85)
+    temp2 = bernoulli(coinWeight)
+    hardObserve(temp1 == temp2)
+}
+

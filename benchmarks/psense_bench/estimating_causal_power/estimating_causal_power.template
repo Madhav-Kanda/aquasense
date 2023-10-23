@@ -1,0 +1,14 @@
+vector [N] observedData0 : [1, 1, 0, 1]
+vector [N] observedData1 : [1, 1, 0, 1]
+float cp
+cp = uniform(0, 1)
+float b
+b = uniform(0, 1)
+for (i in 1:4) {
+    float temp1
+    float temp2
+    temp1 = bernoulli(cp)
+    temp2 = bernoulli(b)
+    hardObserve(((observedData0[i] && temp1) || temp2) == observedData1[i])
+}
+

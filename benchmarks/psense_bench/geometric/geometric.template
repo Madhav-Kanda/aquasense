@@ -1,0 +1,2 @@
+int g
+g = geometric(0.5)

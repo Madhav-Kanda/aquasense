@@ -1,0 +1,4 @@
+def main(){
+        c := binomial(1, 0.5);
+        return c;
+}

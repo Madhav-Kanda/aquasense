@@ -1,0 +1,21 @@
+vector[3] ind : [1, 0, 1]
+@limits<lower=-10, upper=10>
+float x1
+x1 = normal(0, 1)
+@limits<lower=-10, upper=10>
+float x2
+x2 = normal(0, 1)
+@limits<lower=-10, upper=10>
+float x3
+x3 = normal(0, 1)
+@limits<lower=-10, upper=10>
+float r[3]
+for (i in 1:3) {
+    if (ind[i]) {
+        hardObserve(r[i] == x[i])
+    } else {
+        hardObserve(r[i] == 0)
+    }
+}
+float 
+

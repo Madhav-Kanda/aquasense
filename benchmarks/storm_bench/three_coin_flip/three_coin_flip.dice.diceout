@@ -1,0 +1,11 @@
+================[ Joint Distribution ]================
+Value	Probability	
+0	0.25	
+1	0.75	
+2	0	
+3	0	
+
+
+real	0m0.039s
+user	0m0.020s
+sys	0m0.016s

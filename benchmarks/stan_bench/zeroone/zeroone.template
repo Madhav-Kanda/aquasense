@@ -1,0 +1,15 @@
+@limits <lower=0>
+int N : 20
+int y[N] : [1, -1, 1, -1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, 1, 1]
+float x1[N] : [6, 8, -1, 0, 5, 1.2, -2, 9.8, 4, 12, 1, 10, 1, 2.2, -6, 9.8, 1, 1, 1, 1]
+@limits <lower=-10,upper=10>
+@prior
+float w1
+@limits <lower=-10,upper=10>
+@prior
+float w2
+w1 = uniform(-10,10)
+w2 = uniform(-10,10)
+for(i in 1:N){
+target = target + ((y[i]*(x1[i]*w1+w2)<0)?0:1)
+}

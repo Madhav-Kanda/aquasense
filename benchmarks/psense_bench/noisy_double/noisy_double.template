@@ -1,0 +1,11 @@
+float x
+x = 3
+float ret
+ret = uniformInt(0, 6)
+float temp
+temp = bernoulli(0.5)
+if (temp) {
+    ret = atom(x)
+} else {
+    ret = atom(x + x)
+}

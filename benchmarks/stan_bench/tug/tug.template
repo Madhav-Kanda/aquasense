@@ -1,0 +1,13 @@
+int N : 40
+int y[N] : [0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1]
+@limits <lower=-5,upper=5>
+@prior
+float alice
+@limits <lower=-5,upper=5>
+@prior
+float bob
+target = target + log_mix(0.33,normal_lpdf(alice,1,1),normal_lpdf(alice,0.5,0.5))
+target = target + log_mix(0.33,normal_lpdf(bob,1,1),normal_lpdf(bob,0.5,0.5))
+for(i in 1:N){
+target = target + ((abs(alice)>abs(bob))==y[i])?1:0
+}

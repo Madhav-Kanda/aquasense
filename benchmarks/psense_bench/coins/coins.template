@@ -1,0 +1,8 @@
+float c1
+float c2
+c1 = flip(1/2)
+c2 = flip(1/2)
+float bothHeads
+bothHeads = c1 && c2
+hardObserve(bothHeads == 0)
+

@@ -1,0 +1,31 @@
+vector[8] observedData : [1,1,1,1,0,0,0,0]
+
+float coins_weight0
+float coins_weight1
+float temp1
+float coins_num
+
+coins_weight0 = uniform(0, 1)
+coins_weight1 = uniform(0, 1)
+temp1 = bernoulli(0.5)
+coins_num = uniformInt(1, 2)
+for (i in 1:8) {
+    float obs_temp0
+    float obs_temp1
+    float temp2
+    temp2 = bernoulli(0.5)
+    obs_temp0 = bernoulli(coins_weight0)
+    obs_temp1 = bernoulli(coins_weight1)
+    if (temp1 == 0) {
+        coins_num = atom(2)
+        if (temp2) {
+            hardObserve(obs_temp1 == observedData[i])
+        } else {
+            hardObserve(obs_temp0 == observedData[i])
+        }
+    } else {
+        coins_num = atom(1)
+        hardObserve(obs_temp0 == observedData[i])
+    }
+} 
+

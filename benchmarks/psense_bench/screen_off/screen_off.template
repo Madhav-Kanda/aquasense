@@ -1,0 +1,12 @@
+float A
+float B
+float C
+C = bernoulli(0.5)
+if (C) {
+    A = bernoulli(0.5)
+    B = bernoulli(0.1)
+} else {
+    A = bernoulli(0.4)
+    B = bernoulli(0.9)
+}
+hardObserve(C)

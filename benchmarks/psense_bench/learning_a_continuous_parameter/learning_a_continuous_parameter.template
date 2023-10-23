@@ -1,0 +1,8 @@
+vector[N] observeData : [1,1,1,1,1]
+float coinWeight
+coinWeight = uniform(0, 1)
+for (i in 1:5) {
+    float coin
+    coin = bernoulli(coinWeight)
+    hardObserve(coin == 1)
+} 

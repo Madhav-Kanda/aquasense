@@ -1,0 +1,28 @@
+float earthquake
+earthquake = flip(0.0001)
+float burglary
+burglary = flip(0.001)
+float alarm
+alarm = earthquake || burglary
+float phoneWorking
+phoneWorking = flip(0.5)
+if (earthquake) {
+    phoneWorking = flip(0.7)
+}
+else {
+    phoneWorking = flip(0.99)
+}
+float maryWakes
+maryWakes = flip(0.5)
+if (alarm) {
+    if (earthquake) {
+        maryWakes = flip(0.8)
+    } else {
+        maryWakes = flip(0.6)
+    }
+} else {
+    maryWakes = flip(0.2)
+}
+float called
+called = maryWakes && phoneWorking
+hardObserve(called)

@@ -1,0 +1,6 @@
+def main(){ 
+	A := uniformInt(0,9); 
+	B := uniformInt(0,9); 
+	observe(A == B); 
+	return Expectation(A);
+}

@@ -1,0 +1,56 @@
+float b1
+float w1
+b1 = uniformInt(1, 4)
+w1 = uniformInt(1, 4)
+hardObserve(b1 == 1)
+hardObserve(w1 == 1)
+float total_num1
+total_num1 = b1 + w1
+float result1
+result1 = bernoulli(w1/ total_num1)
+float b2
+float w2
+b2 = uniformInt(1, 4)
+w2 = uniformInt(1, 4)
+if (result1 == 0) {
+    hardObserve(b2 == b1 + 1)
+    hardObserve(w2 == w1)
+} else {
+    hardObserve(w2 == w1 + 1)
+    hardObserve(b2 == b1)
+}
+float total_num2
+total_num2 = b2 + w2
+float result2
+result2 = bernoulli(w2/ total_num2)
+float b3
+float w3
+b3 = uniformInt(1, 4)
+w3 = uniformInt(1, 4)
+if (result1 == 0) {
+    hardObserve(b3 == b2 + 1)
+    hardObserve(w3 == w2)
+} else {
+    hardObserve(w3 == w2 + 1)
+    hardObserve(b3 == b2)
+}
+float total_num3
+total_num3 = b3 + w3
+float result3
+result3 = bernoulli(w3/ total_num3)
+float b4
+float w4
+b4 = uniformInt(1, 4)
+w4 = uniformInt(1, 4)
+if (result1 == 0) {
+    hardObserve(b4 == b3 + 1)
+    hardObserve(w4 == w3)
+} else {
+    hardObserve(w4 == w3 + 1)
+    hardObserve(b4 == b3)
+}
+float one
+one = uniformInt(0, 3)
+hardObserve(one == result1 + result2 + result3)
+
+
