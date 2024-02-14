@@ -32,6 +32,7 @@ For Apple silicon users, run
     mvn package -DskipTests=true -U -Djavacpp.platform=macosx-x86_64
 
 Blocked mirror link error [refer](https://stackoverflow.com/questions/67833372/getting-blocked-mirror-for-repositories-maven-error-even-after-adding-mirrors/67835542#67835542)
+
 Refer to the following for other installation-related errors specific to Apple Silicon [link](https://community.konduit.ai/t/support-for-apple-silicon-m1/1168)
 
 In the end it should print `BUILD SUCCESS`.
